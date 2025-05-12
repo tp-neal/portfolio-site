@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tyler Neal Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <header class="navbar">
+                <div class="container navbar__container">
+                    <img
+                        class="navbar__logo"
+                        src="../assets/null-term.png"
+                        alt="Tyler Neal Portfolio Logo"
+                    />
+                    <nav class="navbar__nav">
+                        <a class="navbar__nav-link navbar__nav-link--home" href="#home">Home</a>
+                        <a class="navbar__nav-link navbar__nav-link--about" href="#about">About</a>
+                        <a class="navbar__nav-link navbar__nav-link--projects" href="#projects"
+                            >Projects</a
+                        >
+                        <a class="navbar__nav-link navbar__nav-link--contact" href="#contact"
+                            >Contact
+                        </a>
+                    </nav>
+                </div>
+            </header>
+
+            <section id="home" class="hero">
+                <div class="container hero__container">
+                    <h1 class="hero__title-group">
+                        I'm <span class="hero__name-highlight">Tyler Neal</span><br /><span
+                            class="hero__subtitle"
+                            >Software Engineer</span
+                        >
+                    </h1>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="container about-section__intro-container">
+                    <h2 class="about-section__intro-header">It's nice to meet you!</h2>
+                    <p class="about-section__intro-paragraph">
+                        Hey there! Great to meet you. I'm Tyler Neal, a software engineer based here
+                        in the metro Detroit area, just west of Lake St. Clair. I recently graduated
+                        from Michigan Technological University in December 2024 with my Computer
+                        Science degree. I'm particularly passionate about systems programming and
+                        diving into the low-level with C/C++ – I find it genuinely exciting to
+                        understand how software works closer to the hardware. When I'm not coding,
+                        you can usually find me enjoying the lake, playing guitar, watching movies
+                        with my family, or maybe firing up a video game. Feel free to reach out if
+                        you'd like to connect!
+                    </p>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resume__link"
+                        href="https://raw.githubusercontent.com/tp-neal/my-resume/main/Tyler-Neal_Resume.pdf"
+                        ><strong class="button resume__button">view resume</strong>
+                    </a>
+                </div>
+
+                <div class="container about-sections-and-language-container">
+                    <div class="container about-section__cards-container">
+                        <div class="info-card info-card--team-projects">
+                            <div class="info-card__icon-wrapper">
+                                <img
+                                    class="info-card__icon-image info-card__icon-image--team-projects"
+                                    src="../assets/about-section-icons/edit-white.png"
+                                    alt="Team Projects Icon"
+                                />
+                            </div>
+                            <h2 class="info-card__primary-heading">
+                                Team Projects
+                                <hr />
+                            </h2>
+                            <div class="info-card__divider-wrapper">
+                                <div class="info-card__divider"></div>
+                            </div>
+                            <div class="info-card__body info-card__body--team-projects">
+                                <div class="team-project">
+                                    <h3 class="team-project__title">
+                                        Pump-Action (Online Multiplayer FPS)
+                                    </h3>
+                                    <p class="team-project__meta">
+                                        <em
+                                            >Husky Game Development &bull; Fall 2022 - Spring
+                                            2023</em
+                                        >
+                                    </p>
+                                    <ul class="team-project__contributions">
+                                        <li>
+                                            Led back-end development for fluid ground-up vector
+                                            based movement.
+                                        </li>
+                                        <li>
+                                            Managed client authentification, connectivity, and RPC
+                                            game manager.
+                                        </li>
+                                    </ul>
+                                    <strong>Technologies:</strong> Unity, C#, Blender<br />
+                                    <strong>Methodologies:</strong> Agile Development, Scrum<br /><br />
+                                </div>
+
+                                <div class="team-project">
+                                    <h3 class="team-project__title">Slime.io (Pet Manager Game)</h3>
+                                    <p class="team-project__meta">
+                                        <em>CS3141 - Team Software Project &bull; Spring 2023</em>
+                                    </p>
+                                    <ul class="team-project__contributions">
+                                        <li>
+                                            Implemented slime animation logic including
+                                            interpolation of shape key animations.
+                                        </li>
+                                        <li>
+                                            Worked as scrum master to ensure effective and efficient
+                                            management of jira tickets for each development cycle.
+                                        </li>
+                                    </ul>
+                                    <strong>Technologies:</strong> Unity, C#, Blender, Jira<br />
+                                    <strong>Methodologies:</strong> Agile Development, Scrum<br /><br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-card info-card--education">
+                            <div class="info-card__icon-wrapper">
+                                <img
+                                    class="info-card__icon-image info-card__icon-image--education"
+                                    src="../assets/about-section-icons/book-white.png"
+                                    alt="Education Icon"
+                                />
+                            </div>
+                            <h2 class="info-card__primary-heading">
+                                Education
+                                <hr />
+                            </h2>
+                            <div class="info-card__divider-wrapper">
+                                <div class="info-card__divider"></div>
+                            </div>
+                            <div class="info-card__body info-card__body--education-details">
+                                <span class="education-details__years">2020 - 2024</span>
+                                <span class="education-details__degree"
+                                    >Bachelor's of Science in Computer Science</span
+                                >
+                                <span class="education-details__meta">
+                                    <span class="education-details__school"
+                                        >Michigan Technological University</span
+                                    >
+                                    <span class="education-details__location">Houghton, MI</span>
+                                </span>
+                            </div>
+                            <h3 class="info-card__secondary-heading">Recent Courses</h3>
+                            <ul class="info-card__class-list">
+                                <li class="class-list__item">Programming Languages</li>
+                                <li class="class-list__item">Computer Architecture</li>
+                                <li class="class-list__item">Systems Programming</li>
+                                <li class="class-list__item">Computer Networks</li>
+                                <li class="class-list__item">Computer Security</li>
+                                <li class="class-list__item">Concurrent Computing</li>
+                                <li class="class-list__item">Introduction to Databases</li>
+                                <li class="class-list__item">Hardware Software Interface</li>
+                                <li class="class-list__item">Formal Models of Computaton</li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card info-card--hobbies">
+                            <div class="info-card__icon-wrapper">
+                                <img
+                                    class="info-card__icon-image info-card__icon-image--hobbies"
+                                    src="../assets/about-section-icons/user-white.png"
+                                    alt="Hobbies Icon"
+                                />
+                            </div>
+
+                            <h2 class="info-card__primary-heading">
+                                Hobbies
+
+                                <hr />
+                            </h2>
+
+                            <div class="info-card__divider-wrapper">
+                                <div class="info-card__divider"></div>
+                            </div>
+
+                            <div class="info-card__body info-card__body--hobbies">
+                                <h3 class="hobbies__title">What else do I do?</h3>
+
+                                <p class="hobbies__intro">
+                                    Beyond the world of software, I have a few passions that keep me
+                                    engaged and learning:
+                                </p>
+
+                                <ul class="hobbies__list">
+                                    <li class="hobbies__item">
+                                        <strong class="hobbies__item-title"
+                                            >Nature & Boating:</strong
+                                        >
+
+                                        <span class="hobbies__item-description"
+                                            >Living near Lake St. Clair is a dream for someone who
+                                            loves boating, beaching, sitting under the sun.</span
+                                        >
+                                    </li>
+
+                                    <br />
+
+                                    <li class="hobbies__item">
+                                        <strong class="hobbies__item-title"
+                                            >Retro Gaming & Game Design:</strong
+                                        >
+
+                                        <span class="hobbies__item-description"
+                                            >I have a soft spot for classic video games and
+                                            occasionally dabble in simple game development projects
+                                            using engines like Godot.</span
+                                        >
+                                    </li>
+
+                                    <br />
+
+                                    <li class="hobbies__item">
+                                        <strong class="hobbies__item-title"
+                                            >Learning Guitar:</strong
+                                        >
+
+                                        <span class="hobbies__item-description"
+                                            >I've been playing guitar for a little under half a
+                                            decade now. I find it a fun way to relieve stress,
+                                            connect with others, and having a blast while listening
+                                            to my favorite indie-rock songs!</span
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container about-languages__cards-container">
+                        <div class="languages">
+                            <h3 class="languages__main-header">Programming Languages</h3>
+                            <div class="languages__entries">
+                                <div class="languages__entry languages__entry--c">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/c-logo.png"
+                                    />
+                                    <h3 class="language-name">C</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--cpp">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/cpp-logo.png"
+                                    />
+                                    <h3 class="language-name">C++</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--java">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/java-logo.png"
+                                    />
+                                    <h3 class="language-name">Java</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--python">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/python-logo.png"
+                                    />
+                                    <h3 class="language-name">Python</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--javascript">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/javascript-logo.png"
+                                    />
+                                    <h3 class="language-name">Javascript</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--html">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/html-logo.png"
+                                    />
+                                    <h3 class="language-name">HTML</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--css">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/css-logo.png"
+                                    />
+                                    <h3 class="language-name">CSS</h3>
+                                </div>
+                                <div class="languages__entry languages__entry--mysql">
+                                    <img
+                                        class="entry__image"
+                                        src="../assets/language-logos/mysql-logo.png"
+                                    />
+                                    <h3 class="language-name">MySQL</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <div class="container projects-section__container">
+                    <h2 class="projects-section__title">Projects</h2>
+                    <div class="projects-section__grid">
+                        <div
+                            id="project-1"
+                            class="project-card project-card--cache project--left-aligned"
+                        >
+                            <img
+                                class="project-card__image"
+                                src="../assets/example.png"
+                                alt="Cache Simulator Project Thumbnail"
+                            />
+                            <div class="project-card__text-content">
+                                <h3 class="project-card__title">
+                                    Direct-Mapped Write-Back Trace-Based Cache Simulator
+                                </h3>
+                                <p class="project-card__description">
+                                    A trace-driven cache simulator implementing a direct-mapped
+                                    write-back cache hierarchy with configurable L1, L2, and L3
+                                    caches. Designed to test the SPEC95 benchmarks.
+                                </p>
+                                <a
+                                    class="project-card__repo-link"
+                                    href="https://github.com/tp-neal/dev-projects/tree/main/Cache"
+                                    ><span class="button project-card__repo-button"
+                                        >github repo</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            id="project-2"
+                            class="project-card project-card--rpc project--right-aligned"
+                        >
+                            <img
+                                class="project-card__image"
+                                src="../assets/example.png"
+                                alt="RPC System Calls Project Thumbnail"
+                            />
+                            <div class="project-card__text-content">
+                                <h3 class="project-card__title">RPC System Calls</h3>
+                                <p class="project-card__description">
+                                    A client-server application using RPC to enable remote execution
+                                    of file system calls (e.g., open, read, write) on a server.
+                                    Focused on network communication protocols and data marshalling
+                                    between client and server processes.
+                                </p>
+                                <a
+                                    class="project-card__repo-link"
+                                    href="https://github.com/tp-neal/dev-projects/tree/main/RPCSysCalls"
+                                    ><span class="button project-card__repo-button"
+                                        >github repo</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+
+                        <div
+                            id="project-3"
+                            class="project-card project-card--command-logger project--left-aligned"
+                        >
+                            <img
+                                class="project-card__image"
+                                src="../assets/example.png"
+                                alt="Command-Line Logger Project Thumbnail"
+                            />
+                            <div class="project-card__text-content">
+                                <h3 class="project-card__title">Command-Line Logger</h3>
+                                <p class="project-card__description">
+                                    A command-line utility to execute commands while capturing their
+                                    stdin, stdout, and stderr to log files and simultaneously
+                                    displaying real-time terminal output. Contains robust file
+                                    descriptor management and inter-process data piping.
+                                </p>
+                                <a
+                                    class="project-card__repo-link"
+                                    href="https://github.com/tp-neal/dev-projects/tree/main/CommandLog"
+                                    ><span class="button project-card__repo-button"
+                                        >github repo</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="contact" class="contact-section">
+                <div class="container contact-section__container">
+                    <h2 class="contact-section__title">Contact Me</h2>
+                    <h4 class="my-email">
+                        <hr />
+                        tylerneal.dev@gmail.com
+                    </h4>
+                    <div class="social-link__container">
+                        <a class="social-link social-link--github" href="">
+                            <img
+                                class="social-icon social-icon--github"
+                                src="../assets/icons8-github-128.png"
+                            />
+                        </a>
+                        <a class="social-link social-link--linkedin" href="">
+                            <img
+                                class="social-icon social-icon--linkedin"
+                                src="../assets/icons8-linkedin-100.png"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
