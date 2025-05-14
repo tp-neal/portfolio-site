@@ -2,7 +2,7 @@
 {
     font-family: JetBrainsMono;
 
-    src: url(../assets/JetBrainsMono-Regular.woff2);
+    src: url(../assets/fonts/JetBrainsMono-Regular.woff2);
 }
 
 /*==================================================================================================
@@ -92,7 +92,7 @@ main
 /*==================================================================================================
     NAVIGATION LINKS
 ==================================================================================================*/
-.navbar__nav-link
+.navbar__link
 {
     font-size: 1.25rem;
 
@@ -108,17 +108,17 @@ main
     background: none;
 }
 
-.navbar__nav-link:hover
+.navbar__link:hover
 {
-    color: rgb(123, 94, 255);
+    color: rgb(239, 192, 82);
 }
 
-/* Dot Under Navigation Items (.navbar__nav-link::after)
+/* Dot Under Navigation Items (.navbar__link::after)
 
    This dot will show which section you are in based on whick nav item it appears
    under.
 */
-.navbar__nav-link::after
+.navbar__link::after
 {
     position: absolute;
     bottom: -5px;
@@ -135,10 +135,10 @@ main
 
     opacity: 0;
     border-radius: 100%;
-    background-color: rgb(112, 85, 233);
+    background-color: rgb(239, 192, 82);
 }
 
-.navbar__nav-link--active::after
+.navbar__link--active::after
 {
     opacity: 1;
 }
@@ -199,7 +199,7 @@ main
 
 .about-section__intro-header
 {
-    font-size: 2.25rem;
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
 
     text-align: center;
 }
@@ -207,6 +207,7 @@ main
 .about-section__intro-paragraph
 {
     font-size: 1.3rem;
+    font-size: clamp(1rem, 3vw, 1.3rem);
 
     max-width: 800px;
 
@@ -230,6 +231,8 @@ main
 
 .resume__button
 {
+    font-weight: bold;
+
     display: inline-block;
 
     width: 10rem;
@@ -254,9 +257,13 @@ main
 
     width: 100%;
     min-height: 90vh;
+    padding-right: 2vw;
     padding-bottom: 10vh;
+    padding-left: 2vw;
 
     background-color: rgb(31, 28, 44);
+
+    gap: 2vw;
 }
 
 /* General Info Card Styling (Applies to all cards) */
@@ -264,13 +271,13 @@ main
 {
     display: flex;
     align-items: center;
+    flex: 1;
     flex-direction: column;
     justify-content: start;
 
-    width: 29vw;
     min-height: 82vh;
     margin-top: -10vh; /* Overlap with previous section section */
-    padding: 1rem;
+    padding: 2rem;
 
     transition: transform .3s ease-in-out;
 
@@ -449,11 +456,96 @@ main
     margin-bottom: .25em;
 }
 
+.hobbies__item
+{
+    margin-bottom: 1rem;
+}
+
 .hobbies__item-title
 {
     color: rgb(239, 192, 82);
 }
 
+/*==================================================================================================
+    ABOUT-SUBSECTIONS (1300px)
+==================================================================================================*/
+@media (max-width: 1300px)
+{
+    .about-section__cards-container
+    {
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+
+        gap: 5vh;
+    }
+
+    .info-card
+    {
+        align-items: center;
+
+        width: clamp(30rem, 70vw, 80rem);
+        margin-top: 0;
+
+        text-align: center;
+    }
+
+    .info-card__body
+    {
+        width: 90%;
+    }
+
+    /* Team Projects
+    ********************************************/
+    .info-card--team-projects
+    {
+        margin-top: -10vh;
+    }
+
+    .team-project__contributions
+    {
+        padding-left: 0;
+
+        list-style-type: none;
+    }
+
+    /* Education
+    ********************************************/
+    .info-card__body--education-details
+    {
+        text-align: center;
+    }
+
+    .info-card__class-list
+    {
+        padding-left: 0;
+
+        text-align: left;
+
+        column-count: 2;
+    }
+
+    /* Hobbies
+    ********************************************/
+    .hobbies__list
+    {
+        padding-left: 0;
+
+        list-style-type: none;
+    }
+
+    .hobbies__item
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hobbies__item-description
+    {
+        width: 70%;
+    }
+}
 
 /*==================================================================================================
     LANGUAGES
@@ -464,6 +556,7 @@ main
     align-items: start;
     justify-content: center;
 
+    padding-top: 10vh;
     padding-bottom: 10vh;
 
     background-color: rgb(31, 28, 44);
@@ -558,11 +651,35 @@ main
 }
 
 /*==================================================================================================
+    LANGUAGES (1300px)
+==================================================================================================*/
+@media (max-width: 1300px)
+{
+    .languages
+    {
+        width: clamp(30rem, 70vw, 80rem);
+    }
+
+    .languages__entries
+    {
+        flex-direction: row;
+
+        gap: 1rem;
+    }
+
+    .languages__entry
+    {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+/*==================================================================================================
     PROJECTS
 ==================================================================================================*/
 .projects-section
 {
-    padding-top: 1px;
+    padding-top: 3vh;
     padding-bottom: 15vh;
 
     background-color: rgb(80, 61, 165);
@@ -577,7 +694,7 @@ main
 
 .projects-section__title
 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
 
     padding: 5vh;
 }
@@ -673,7 +790,7 @@ main
 {
     align-self: flex-start;
 
-    margin-left: -20vw;
+    margin-left: -20%;
 }
 
 .project-card--cache > .project-card__image,
@@ -686,7 +803,7 @@ main
 {
     align-self: flex-end;
 
-    margin-right: -20vw;
+    margin-right: -20%;
 }
 
 .project-card--rpc > .project-card__image
@@ -698,16 +815,68 @@ main
 
 .project--left-active
 {
-    transform: translateX(26vw);
+    transform: translateX(38.5%);
 }
 
 .project--right-active
 {
-    transform: translateX(-26.45vw);
+    transform: translateX(-38.5%);
 }
 
 /*==================================================================================================
-    CONTACT (originally was a duplicate PROJECTS comment)
+    PROJECTS (800px)
+==================================================================================================*/
+@media (max-width: 850px)
+{
+    .project-card
+    {
+        display: flex;
+        align-items: center;
+        align-self: center;
+        flex-direction: column;
+
+        width: clamp(30rem, 70vw, 60rem);
+        margin: 0;
+    }
+
+    .project-card__image
+    {
+        margin: 0;
+    }
+
+    .project--left-aligned
+    {
+        margin: 0;
+    }
+
+    .project--left-active
+    {
+        transform: translateX(0);
+    }
+
+    .project--right-active
+    {
+        transform: translateX(0);
+    }
+
+    /* Project specific
+    ***************************************************/
+    .project-card--rpc > .project-card__image
+    {
+        order: 0;
+
+        margin-right: 0;
+    }
+
+    .project-card--cache > .project-card__image,
+    .project-card--command-logger > .project-card__image
+    {
+        margin-left: 0;
+    }
+}
+
+/*==================================================================================================
+    CONTACT 
 ==================================================================================================*/
 .contact-section
 {

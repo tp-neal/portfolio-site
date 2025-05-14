@@ -9,10 +9,10 @@ function setupNavlinkObservers() {
     const contact = document.getElementById("contact");
     const projects = document.getElementById("projects");
 
-    const homeNav = document.getElementsByClassName("navbar__nav-link--home");
-    const aboutNav = document.getElementsByClassName("navbar__nav-link--about");
-    const contactNav = document.getElementsByClassName("navbar__nav-link--contact");
-    const projectsNav = document.getElementsByClassName("navbar__nav-link--projects");
+    const homeNav = document.querySelector(".navbar__link--home");
+    const aboutNav = document.querySelector(".navbar__link--about");
+    const contactNav = document.querySelector(".navbar__link--contact");
+    const projectsNav = document.querySelector(".navbar__link--projects");
 
     const navs = new Map();
     navs.set(home, homeNav);
@@ -22,7 +22,7 @@ function setupNavlinkObservers() {
 
     const homeOptions = {
         root: null,
-        threshold: 0.5,
+        threshold: 0.6,
     };
 
     const aboutOptions = {
@@ -37,15 +37,15 @@ function setupNavlinkObservers() {
 
     const contactOptions = {
         root: null,
-        threshold: 0.7,
+        threshold: 0.8,
     };
 
     function handleIntersection(entries, observer) {
         for (const entry of entries) {
             if (entry.isIntersecting) {
-                navs.get(entry.target)[0].classList.add("navbar__nav-link--active");
+                navs.get(entry.target).classList.add("navbar__link--active");
             } else {
-                navs.get(entry.target)[0].classList.remove("navbar__nav-link--active");
+                navs.get(entry.target).classList.remove("navbar__link--active");
             }
         }
     }

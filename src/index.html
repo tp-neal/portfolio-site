@@ -8,25 +8,21 @@
     </head>
     <body>
         <main>
-            <header class="navbar">
+            <nav class="navbar">
                 <div class="container navbar__container">
                     <img
                         class="navbar__logo"
                         src="../assets/null-term.png"
                         alt="Tyler Neal Portfolio Logo"
                     />
-                    <nav class="navbar__nav">
-                        <a class="navbar__nav-link navbar__nav-link--home" href="#home">Home</a>
-                        <a class="navbar__nav-link navbar__nav-link--about" href="#about">About</a>
-                        <a class="navbar__nav-link navbar__nav-link--projects" href="#projects"
-                            >Projects</a
-                        >
-                        <a class="navbar__nav-link navbar__nav-link--contact" href="#contact"
-                            >Contact
-                        </a>
-                    </nav>
+                    <div class="navbar__links">
+                        <a class="navbar__link navbar__link--home" href="#home">Home</a>
+                        <a class="navbar__link navbar__link--about" href="#about">About</a>
+                        <a class="navbar__link navbar__link--projects" href="#projects">Projects</a>
+                        <a class="navbar__link navbar__link--contact" href="#contact">Contact </a>
+                    </div>
                 </div>
-            </header>
+            </nav>
 
             <section id="home" class="hero">
                 <div class="container hero__container">
@@ -43,22 +39,20 @@
                 <div class="container about-section__intro-container">
                     <h2 class="about-section__intro-header">It's nice to meet you!</h2>
                     <p class="about-section__intro-paragraph">
-                        Hey there! Great to meet you. I'm Tyler Neal, a software engineer based here
-                        in the metro Detroit area, just west of Lake St. Clair. I recently graduated
-                        from Michigan Technological University in December 2024 with my Computer
-                        Science degree. I'm particularly passionate about systems programming and
-                        diving into the low-level with C/C++ – I find it genuinely exciting to
-                        understand how software works closer to the hardware. When I'm not coding,
-                        you can usually find me enjoying the lake, playing guitar, watching movies
-                        with my family, or maybe firing up a video game. Feel free to reach out if
-                        you'd like to connect!
+                        Hi there, I'm Tyler, a software engineer based here in the metro Detroit
+                        area. I recently graduated from Michigan Technological University in
+                        December 2024 with my Bachelor's degree in Computer Science. I'm
+                        particularly passionate about systems programming and diving into the
+                        low-level with C/C++ – I find it genuinely exciting to understand how
+                        software works closer to the hardware. Feel free to reach out if you'd like
+                        to connect!
                     </p>
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         class="resume__link"
                         href="https://raw.githubusercontent.com/tp-neal/my-resume/main/Tyler-Neal_Resume.pdf"
-                        ><strong class="button resume__button">view resume</strong>
+                        ><span class="button resume__button">view resume</span>
                     </a>
                 </div>
 
@@ -68,13 +62,13 @@
                             <div class="info-card__icon-wrapper">
                                 <img
                                     class="info-card__icon-image info-card__icon-image--team-projects"
-                                    src="../assets/about-section-icons/edit-white.png"
+                                    src="../assets/about-icons/edit.png"
                                     alt="Team Projects Icon"
                                 />
                             </div>
                             <h2 class="info-card__primary-heading">
                                 Team Projects
-                                <hr />
+                                <hr class="info-card__divider-hr" />
                             </h2>
                             <div class="info-card__divider-wrapper">
                                 <div class="info-card__divider"></div>
@@ -129,26 +123,23 @@
                             <div class="info-card__icon-wrapper">
                                 <img
                                     class="info-card__icon-image info-card__icon-image--education"
-                                    src="../assets/about-section-icons/book-white.png"
+                                    src="../assets/about-icons/book.png"
                                     alt="Education Icon"
                                 />
                             </div>
                             <h2 class="info-card__primary-heading">
                                 Education
-                                <hr />
+                                <hr class="info-card__divider-hr" />
                             </h2>
-                            <div class="info-card__divider-wrapper">
-                                <div class="info-card__divider"></div>
-                            </div>
                             <div class="info-card__body info-card__body--education-details">
                                 <span class="education-details__years">2020 - 2024</span>
-                                <span class="education-details__degree"
-                                    >Bachelor's of Science in Computer Science</span
-                                >
+                                <span class="education-details__degree">
+                                    Bachelor's of Science in Computer Science
+                                </span>
                                 <span class="education-details__meta">
-                                    <span class="education-details__school"
-                                        >Michigan Technological University</span
-                                    >
+                                    <span class="education-details__school">
+                                        Michigan Technological University
+                                    </span>
                                     <span class="education-details__location">Houghton, MI</span>
                                 </span>
                             </div>
@@ -170,21 +161,15 @@
                             <div class="info-card__icon-wrapper">
                                 <img
                                     class="info-card__icon-image info-card__icon-image--hobbies"
-                                    src="../assets/about-section-icons/user-white.png"
+                                    src="../assets/about-icons/user.png"
                                     alt="Hobbies Icon"
                                 />
                             </div>
 
                             <h2 class="info-card__primary-heading">
                                 Hobbies
-
-                                <hr />
+                                <hr class="info-card__divider-hr" />
                             </h2>
-
-                            <div class="info-card__divider-wrapper">
-                                <div class="info-card__divider"></div>
-                            </div>
-
                             <div class="info-card__body info-card__body--hobbies">
                                 <h3 class="hobbies__title">What else do I do?</h3>
 
@@ -205,8 +190,6 @@
                                         >
                                     </li>
 
-                                    <br />
-
                                     <li class="hobbies__item">
                                         <strong class="hobbies__item-title"
                                             >Retro Gaming & Game Design:</strong
@@ -218,8 +201,6 @@
                                             using engines like Godot.</span
                                         >
                                     </li>
-
-                                    <br />
 
                                     <li class="hobbies__item">
                                         <strong class="hobbies__item-title"
@@ -327,6 +308,8 @@
                                     caches. Designed to test the SPEC95 benchmarks.
                                 </p>
                                 <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     class="project-card__repo-link"
                                     href="https://github.com/tp-neal/dev-projects/tree/main/Cache"
                                     ><span class="button project-card__repo-button"
@@ -354,6 +337,8 @@
                                     between client and server processes.
                                 </p>
                                 <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     class="project-card__repo-link"
                                     href="https://github.com/tp-neal/dev-projects/tree/main/RPCSysCalls"
                                     ><span class="button project-card__repo-button"
@@ -381,6 +366,8 @@
                                     descriptor management and inter-process data piping.
                                 </p>
                                 <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     class="project-card__repo-link"
                                     href="https://github.com/tp-neal/dev-projects/tree/main/CommandLog"
                                     ><span class="button project-card__repo-button"
@@ -397,20 +384,30 @@
                 <div class="container contact-section__container">
                     <h2 class="contact-section__title">Contact Me</h2>
                     <h4 class="my-email">
-                        <hr />
+                        <hr class="info-card__divider-hr" />
                         tylerneal.dev@gmail.com
                     </h4>
                     <div class="social-link__container">
-                        <a class="social-link social-link--github" href="">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-link social-link--github"
+                            href="https://github.com/tp-neal"
+                        >
                             <img
                                 class="social-icon social-icon--github"
-                                src="../assets/icons8-github-128.png"
+                                src="../assets/socials/github-logo.png"
                             />
                         </a>
-                        <a class="social-link social-link--linkedin" href="">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-link social-link--linkedin"
+                            href="https://linkedin.com/in/tyler-neal-dev"
+                        >
                             <img
                                 class="social-icon social-icon--linkedin"
-                                src="../assets/icons8-linkedin-100.png"
+                                src="../assets/socials/linkedin-logo.png"
                             />
                         </a>
                     </div>
