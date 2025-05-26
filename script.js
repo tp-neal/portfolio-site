@@ -1,7 +1,112 @@
 document.addEventListener("DOMContentLoaded", () => {
+    /* Project Card Setup */
+    setupProjectCards(); // must run this function before setting up project observers
+
+    /* Intersection Observers */
     setupNavlinkObservers();
     setupProjectObservers();
 });
+
+function setupProjectCards() {
+    // Set information for projects
+    const projectInformationEntries = [];
+
+    const cacheProject = {
+        title: "Direct-Mapped Write-Back Trace-Based Cache Simulator",
+        description:
+            "A trace-driven cache simulator implementing a direct-mapped \n" +
+            "write-back cache hierarchy with configurable L1, L2, and L3 \n" +
+            "caches. Designed to test the SPEC95 benchmarks.",
+        visual_link: "assets/project-icons/window-icon_cache.png",
+        github_link: "https://github.com/tp-neal/dev-projects/tree/main/Cache",
+    };
+    projectInformationEntries.push(cacheProject);
+
+    const rpcProject = {
+        title: "RPC System Calls",
+        description:
+            "A client-server application using RPC to enable remote execution \n" +
+            "of file system calls (e.g., open, read, write) on a server. \n" +
+            "Focused on network communication protocols and data marshalling \n" +
+            "between client and server processes.",
+        visual_link: "assets/project-icons/window-icon_server.png",
+        github_link: "https://github.com/tp-neal/dev-projects/tree/main/RPCSysCalls",
+    };
+    projectInformationEntries.push(rpcProject);
+
+    const cmdLineProject = {
+        title: "Command-Line Logger",
+        description:
+            "A command-line utility to execute commands while capturing their \n" +
+            "stdin, stdout, and stderr to log files and simultaneously \n" +
+            "displaying real-time terminal output. Contains robust file \n" +
+            "descriptor management and inter-process data piping.",
+        visual_link: "assets/project-icons/window-icon_terminal.png",
+        github_link: "https://github.com/tp-neal/dev-projects/tree/main/CommandLog",
+    };
+    projectInformationEntries.push(cmdLineProject);
+
+    // Create html generator for cards
+    function projectHTMLGenerator() {
+        let id = 1;
+        let isLeft = true;
+
+        const generator = (projectInformation) => {
+            let side = isLeft ? "left" : "right";
+
+            const projectCardHTML = /*html*/ `
+                <div
+                    id="project-${id}"
+                    class="project-card project--${side}-aligned"
+                >
+                    <img
+                        class="project-card__container-image"
+                        src="${projectInformation.visual_link}"
+                        alt="Cache Simulator Project Container"
+                    />
+
+                    <div class="project-card__text-content">
+                        <h3 class="project-card__title">
+                            ${projectInformation.title}
+                        </h3>
+                        <p class="project-card__description">
+                            ${projectInformation.description}
+                        </p>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-card__repo-link"
+                            href="${projectInformation.github_link}"
+                            ><span class="button project-card__repo-button"
+                                >github repo</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            // handle incremental logic
+            id++;
+            isLeft = !isLeft;
+
+            return projectCardHTML;
+        };
+
+        return generator;
+    }
+
+    // Get container for project entries
+    const projectCardsContainer = document.querySelector(".projects-section__grid");
+    if (!projectCardsContainer) {
+        console.error("Could not find project cards container");
+    }
+
+    // Insert each project card into parent container
+    const generator = projectHTMLGenerator();
+    for (const projectInformation of projectInformationEntries) {
+        projectCardsContainer.innerHTML += generator(projectInformation);
+    }
+}
 
 function setupNavlinkObservers() {
     const home = document.getElementById("home");
