@@ -179,7 +179,7 @@ function setupProjectObservers() {
 
     const projectsOptions = {
         root: null,
-        threshold: 0.71,
+        threshold: 0.1,
     };
 
     function handleIntersection(entries, observer) {
